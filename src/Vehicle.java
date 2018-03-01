@@ -1,27 +1,13 @@
-public class Vehicle implements IPositionable {
+public class Vehicle extends Positionable {
 	
 	private int id;
-	
-	private Point start;
-	private Point finish;
-	
-	private int earliestStart;
-	private int latestFinish ;
-	
-    public int x;
-    public int y;
    
     public Passenger passenger;
     public Passenger target;
 
 
-    Vehicle(int id, Point start, Point finish, int earliestStartn, int latestFinish) {
+    Vehicle(int id) {
         this.id = id;
-        
-        this.start = start;
-        this.finish = finish;
-        this.earliestStart = earliestStart;
-        this.latestFinish = latestFinish;
     }
 
     /**
@@ -35,7 +21,7 @@ public class Vehicle implements IPositionable {
             throw new Error("The car can't take 2 passengers");
         }
 
-        if (this.x != passenger.x || this.y != passenger.y) {
+        if (this.position.x != passenger.position.x || this.position.y != passenger.position.y) {
             throw new Error("The car isn't at the same position as the passenger");
         }
         this.passenger = passenger;
@@ -61,25 +47,22 @@ public class Vehicle implements IPositionable {
     public void move(int d) {
         switch(d) {
             case 0:
-                this.x++;
+                this.position.x++;
                 break;
 
             case 1:
-                this.y--;
+                this.position.y--;
                 break;
             
             case 2:
-                this.x--;
+                this.position.x--;
                 break;
 
             case 3:
-                this.y++;
+                this.position.y++;
                 break;
         }
     }
-    
-    public Point getStart() { return start; }
-    public Point geFinish() { return finish; }
     
 }
 

@@ -1,9 +1,11 @@
-public class Passenger implements IPositionable {
+public class Passenger extends Positionable {
+    public int id;
     /**
      * Current x and y location
      */
-    public int x;
-    public int y;
+    public Point start;
+    public Point finish;
+
     /**
      * Minimum tick to take the passenger
      */
@@ -18,9 +20,9 @@ public class Passenger implements IPositionable {
      * @param minStart Minimum tick to take the passenger
      * @param maxDrop Maximum tick to drop the passenger
      */
-    Passenger(int x, int y, int minStart, int maxDrop) {
-        this.x = x;
-        this.y = y;
+    Passenger(int id, Point start, Point finish, int minStart, int maxDrop) {
+        this.id = id;
+        this.position = start;
         this.minStart = minStart;
         this.maxDrop = maxDrop;
     }
