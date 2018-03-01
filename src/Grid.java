@@ -2,7 +2,8 @@ import java.util.ArrayList;
 
 public class Grid {
 	
-	private ArrayList<Vehicle>[][] tab;
+	public ArrayList<Vehicle>[][] tab;
+	public ArrayList<Vehicle> vehicles;
 	
 	public int rows;
 	public int columns;
@@ -17,6 +18,5 @@ public class Grid {
 		this.NB_MAX_VEHICLE = NB_MAX_VEHICLE;
 		this.BONUS_TIME = BONUS_TIME;
 		this.MAX_STEPS = MAX_STEPS;
-	}
-	
+	}	
 }

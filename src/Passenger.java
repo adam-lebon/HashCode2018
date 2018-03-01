@@ -1,4 +1,4 @@
-public class Passenger {
+public class Passenger implements IPositionable {
     /**
      * Current x and y location
      */
@@ -24,4 +24,9 @@ public class Passenger {
         this.minStart = minStart;
         this.maxDrop = maxDrop;
     }
+
+    public int getPriority(int tick) {
+        return 0;
+    }
+    
 }

@@ -1,7 +1,8 @@
-public class Vehicle {
+public class Vehicle implements IPositionable {
     public int x;
     public int y;
     public Passenger passenger;
+    public Passenger target;
 
     Vehicle() {
         
