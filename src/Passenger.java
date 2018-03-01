@@ -15,6 +15,8 @@ public class Passenger extends Positionable {
      */
     public int maxDrop;
 
+    public Vehicle vehicle;
+
     /**
      * Passenger constructor
      * @param minStart Minimum tick to take the passenger

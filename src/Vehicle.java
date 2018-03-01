@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+
 public class Vehicle extends Positionable {
 	
 	private int id;
    
     public Passenger passenger;
     public Passenger target;
+
+    public ArrayList<int> passengers = new ArrayList<int>();
 
 
     Vehicle(int id) {
