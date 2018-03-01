@@ -18,5 +18,4 @@ public class Grid {
 		this.BONUS_TIME = BONUS_TIME;
 		this.MAX_STEPS = MAX_STEPS;
 	}
-	
 }

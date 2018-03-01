@@ -1,20 +1,36 @@
 public class Vehicle {
+	
+	private int id;
+	
+	private Point start;
+	private Point finish;
+	
+	private int earliestStart;
+	private int latestFinish ;
+	
     public int x;
     public int y;
+   
     public Passenger passenger;
 
-    Vehicle() {
+
+    Vehicle(int id, Point start, Point finish, int earliestStartn, int latestFinish) {
+        this.id = id;
         
+        this.start = start;
+        this.finish = finish;
+        this.earliestStart = earliestStart;
+        this.latestFinish = latestFinish;
     }
 
     /**
-     * Take a passenger in the car
+     * Set a passenger in the car
      * The passenger must be at the same position as the car
      * @param passenger New passenger to take
      * @throws Error If a passenger is already in the car
      */
-    public void takePassenger(Passenger passenger) {
-        if (this.passenger != null) {
+    public void setPassenger(Passenger passenger) {
+        if ( hasPassenger() ) {
             throw new Error("The car can't take 2 passengers");
         }
 
@@ -31,6 +47,10 @@ public class Vehicle {
         Passenger p = this.passenger;
         this.passenger = null;
         return p;
+    }
+    
+    public boolean hasPassenger() {
+    	return (this.passenger != null);
     }
 
     /**
@@ -56,5 +76,9 @@ public class Vehicle {
                 break;
         }
     }
+    
+    public Point getStart() { return start; }
+    public Point geFinish() { return finish; }
+    
 }
 
