@@ -18,5 +18,5 @@ public class Grid {
 		this.NB_MAX_VEHICLE = NB_MAX_VEHICLE;
 		this.BONUS_TIME = BONUS_TIME;
 		this.MAX_STEPS = MAX_STEPS;
-	}	
+	}
 }

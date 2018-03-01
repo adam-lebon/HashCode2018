@@ -3,7 +3,7 @@ public class Scenario {
     private Grid grid;
     
     Scenario() {
-
+        this.tick();
     }
 
     private int getDistanceBetween(IPositionable a, IPositionable b) {
